@@ -1,7 +1,6 @@
 /* eslint-disable */
 import "bootstrap";
 import "./style.css";
-
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
@@ -21,14 +20,17 @@ window.onload = function() {
       "this morning"
     ];
 
+    function RandomGenerator(list) {
+      return list[Math.floor(Math.random() * list.length)];
+    }
     return (
-      who[Math.floor(Math.random() * who.length)] +
+      RandomGenerator(who) +
       " " +
-      action[Math.floor(Math.random() * action.length)] +
+      RandomGenerator(action) +
       " " +
-      what[Math.floor(Math.random() * what.length)] +
+      RandomGenerator(what) +
       " " +
-      when[Math.floor(Math.random() * when.length)]
+      RandomGenerator(when)
     );
   }
 };
